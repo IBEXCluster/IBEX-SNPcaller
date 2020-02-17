@@ -10,9 +10,9 @@ Kingdom of Saudi Arabia <br/>
 
 
 # Authors:
+Nagarajan Kathiresan <nagarajan.kathiresan@kaust.edu.sa> <br/>
 Michael Abrouk <michael.abrouk@kaust.edu.sa> <br/>
 Elodie L. Rey <elodie.rey@kaust.edu.sa> <br/>
-Nagarajan Kathiresan <nagarajan.kathiresan@kaust.edu.sa> <br/>
 
 
 # About Ibex cluster
