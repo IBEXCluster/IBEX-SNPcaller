@@ -30,7 +30,7 @@ The objective of this SNP Caller pipeline is to automate and optimize the variou
 
 ## Data processing 
 
-The data processing includes various jobs steps like s 
+We followed different steps in genome data processing (as part of best practices pipeline) that includes (a) Read trimming (b) Read mappring (c) Mark Duplicate (d) Add/Replace read groups (e) HaplotypeCalling and (f) Compress & Index the gVCF files. All these steps in the data processing pipeline are automated based on the job dependency conditions from SLURM workload scheduler and the proposed scripts will accept all the samples from the given INPUT file directory. Further, the software and/or the job steps can be modified based on the various requirements of the project. We selected the optimal number of cores for each job steps based on our vaious case studies.    
 
 **List of software** <br/>
 trimmomatic version 0.38 <br/>
@@ -45,6 +45,7 @@ tabix version 0.2.6 <br/>
 
 ## Downstream analysis
 
-Further, monitor the job status which includes, (1) completed and (2) failed jobs. <br/>
-Additionally, report the out of memory and timeout jobs from the SLURM scheduler. So that, the SLURM job management will be easy to handle larger number of samples across multiple job steps. <br/>
+
+## Add-on features
+To simplify the job monitoring on multiple samples, we calssified the job statues into 7 categories: (1) Completed (2) Failed (3) Out of Memory (4) Timeout (5) Cancelled (6) Pending and (7) Running. This job classifications are useful (as part of SLURM job management) to handle the handle larger number of samples across multiple job steps. <br/>
 
