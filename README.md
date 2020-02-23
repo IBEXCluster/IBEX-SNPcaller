@@ -28,7 +28,7 @@ Scheduler : SLURM version 19.05.2 <br/>
 
 The objective of this SNP Caller pipeline is to automate and optimize the various job steps across multiple samples. To simplify the pipeline for various project requirements, we separated the pipeline into two parts: (i) Data processing and (2) Downstream analysis. <br/> 
 
-## Data processing 
+## 1. Data processing 
 
 We followed different steps in genome data processing (as part of best practices pipeline) that includes (a) Read trimming (b) Read mappring (c) Mark Duplicate (d) Add/Replace read groups (e) HaplotypeCalling and (f) Compress & Index the gVCF files. All these steps in the data processing pipeline are automated based on the job dependency conditions from SLURM workload scheduler and the proposed scripts will accept all the samples from the given INPUT file directory. Further, the software and/or the job steps can be modified based on the various requirements of the project. We selected the optimal number of cores for each job steps based on our vaious case studies.    
 
@@ -43,7 +43,7 @@ tabix version 0.2.6 <br/>
 **Data processing - Pipeline steps**
 ![](https://www.hpc.kaust.edu.sa/sites/default/files/files/public/workflows/HaplotypeCaller_workflow.png)
 
-## Downstream analysis
+## 2. Downstream analysis
 
 
 ## Add-on features
