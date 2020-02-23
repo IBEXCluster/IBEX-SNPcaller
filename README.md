@@ -54,5 +54,5 @@ GATK 4.1.1.0 <br/>
 <p align="center"> Figure (b) Pipeline steps in downstream analysis <p/>
 
 ## Add-on features
-To simplify the job monitoring on multiple samples, we calssified the job statues into 7 categories: (1) Completed (2) Failed (3) Out of Memory (4) Timeout (5) Cancelled (6) Pending and (7) Running. This job classifications are useful (as part of SLURM job management) to handle larger number of samples across multiple job steps. <br/>
+To simplify the job monitoring on multiple samples, we calssified the job statues into 7 categories: (1) Completed (2) Failed (3) Out of Memory (4) Timeout (5) Cancelled (6) Pending and (7) Running. This job classifications are useful (as part of SLURM job management) to handle larger number of samples across multiple job steps in the data processing pipeline. <br/>
 
