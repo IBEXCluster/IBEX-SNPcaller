@@ -30,7 +30,7 @@ The objective of this SNP Caller pipeline is to automate and optimize the variou
 
 ## 1. Data processing 
 
-We followed different steps in genome data processing (as part of best practices pipeline) that includes (a) Read trimming (b) Read mappring (c) Mark Duplicate (d) Add/Replace read groups (e) HaplotypeCalling and (f) Compress & Index the gVCF files. All these steps in the data processing pipeline are automated based on the job dependency conditions from SLURM workload scheduler and the proposed scripts will accept all the samples from the given INPUT file directory. Further, the software and/or the job steps can be modified based on the various requirements of the project. We selected the optimal number of cores for each job steps based on our vaious case studies. This automated data processing script is available     
+We followed different steps in genome data processing (as part of best practices pipeline) that includes (a) Read trimming (b) Read mappring (c) Mark Duplicate (d) Add/Replace read groups (e) HaplotypeCalling and (f) Compress & Index the gVCF files. All these steps in the data processing pipeline are automated based on the job dependency conditions from SLURM workload scheduler and the proposed scripts will accept all the samples from the given INPUT file directory. Further, the software and/or the job steps can be modified based on the various requirements of the project. We selected the optimal number of cores for each job steps based on our vaious case studies. This automated data processing script called "workflow.sh" is available for your experiments.     
 
 **List of software** <br/>
 trimmomatic version 0.38 <br/>
@@ -44,9 +44,7 @@ tabix version 0.2.6 <br/>
 ![](https://www.hpc.kaust.edu.sa/sites/default/files/files/public/workflows/HaplotypeCaller_workflow.png)
 
 ## 2. Downstream analysis
-During this downstream analysis, the SNPs & INDELs are separated from the gVCF file generated from the above data processing pipeline. This  
-
-is more Compute-intensive operation because   
+During this downstream analysis, the SNPs & INDELs are separated from the gVCF file from the above data processing pipeline. This downstream analysis become more complex and highly Compute-intensive operation when multiple samples are merged into a single gVCF file called "Combined gVCF". Most of the population genetics project required this Combine gVCF file because, the SNPs and INDELs are separated based on chromosome by chromosome.      
 
 ## Add-on features
 To simplify the job monitoring on multiple samples, we calssified the job statues into 7 categories: (1) Completed (2) Failed (3) Out of Memory (4) Timeout (5) Cancelled (6) Pending and (7) Running. This job classifications are useful (as part of SLURM job management) to handle the handle larger number of samples across multiple job steps. <br/>
